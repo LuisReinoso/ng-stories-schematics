@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-stories-schematics": {
+      "description": "A blank storybook file.",
+      "factory": "./ng-stories-schematics/index#ngStoriesSchematics",
+      "schema": "./ng-stories-schematics/schema.json"
+    }
+  }
+}
