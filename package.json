@@ -1,15 +1,25 @@
 {
   "name": "ng-stories-schematics",
-  "version": "0.0.1",
-  "description": "Stories generator schematics",
+  "version": "0.0.2",
+  "description": "Angular stories (Storybook) schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
-    "schematics", "storybook", "angular"
+    "schematics",
+    "storybook",
+    "angular"
   ],
   "author": "Luis Reinoso",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuisReinoso/ng-stories-schematics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuisReinoso/ng-stories-schematics/issues"
+  },
+  "homepage": "https://github.com/LuisReinoso/ng-stories-schematics",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
