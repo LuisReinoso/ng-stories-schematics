@@ -1,28 +1,24 @@
-# Getting Started With Schematics
+# ng stories schematics
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+This angular schematics generate an storybook file. Following the next folder structure.
 
-### Testing
-
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
-
-Check the documentation with
-```bash
-schematics --help
+```
+src/                         project source code
+|- app/                      app components
+|  |- button/                button component example
+|  |- button.component.*     
+|  |- button.stories.ts      <-- story generated
+|  +- ...                    
 ```
 
-### Unit Testing
+## Installation
 
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
+```console
+npm install --save-dev ng-stories-schematics
 ```
 
-That's it!
- 
+## Usage
+
+```console
+ng g ng-stories-schematics:ng-stories-schematics  --name component_name
+```
