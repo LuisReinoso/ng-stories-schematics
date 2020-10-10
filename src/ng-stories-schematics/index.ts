@@ -6,12 +6,12 @@ import {
   apply,
   mergeWith,
   SchematicsException,
-  applyTemplates,
   move,
   chain,
+  template,
 } from "@angular-devkit/schematics";
 import { CreateStoryOptions } from "./schema";
-import { strings, experimental, normalize } from "@angular-devkit/core";
+import { strings, experimental, normalize, join } from "@angular-devkit/core";
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
@@ -35,14 +35,13 @@ export function ngStoriesSchematics(_options: CreateStoryOptions): Rule {
 
     const projectName = _options.project as string;
     const project = workspace.projects[projectName];
-    const projectType = project.projectType === "application" ? "app" : "lib";
 
     if (_options.path === undefined) {
-      _options.path = `${project.sourceRoot}/${projectType}`;
+      _options.path = normalize(join(normalize(project.root), 'src') + '/');
     }
 
     const templateSource = apply(url("./files"), [
-      applyTemplates({
+      template({
         classify: strings.classify,
         dasherize: strings.dasherize,
         name: _options.name,

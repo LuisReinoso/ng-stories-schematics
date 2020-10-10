@@ -1,9 +1,8 @@
-import { MatButtonModule } from "@angular/material/button";
-import { moduleMetadata } from "@storybook/angular";
-import { HappyButtonComponent } from "./happy-button.component";
+import { moduleMetadata } from '@storybook/angular';
+import { <%= classify(name) %>Component } from './<%= dasherize(name) %>.component';
 
 export default {
-  title: "<%= classify(name) %> Component",
+  title: '<%= classify(name) %> Component',
   component: <%= classify(name) %>Component,
   decorators: [
     moduleMetadata({
