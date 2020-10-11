@@ -1,6 +1,6 @@
 {
   "name": "ng-stories-schematics",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular stories (Storybook) schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -10,6 +10,9 @@
     "schematics",
     "storybook",
     "angular"
+  ],
+  "files": [
+    "src"
   ],
   "author": "Luis Reinoso",
   "repository": {
