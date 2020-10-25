@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "name.",
+      "x-prompt": "What's name file?",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "visible": false
+    },
+    "project": {
+      "type": "string",
+      "description": "The project of component.",
+      "$default": {
+        "$source": "projectName"
+      }
+    }
+  },
+  "required": ["name"]
+}
